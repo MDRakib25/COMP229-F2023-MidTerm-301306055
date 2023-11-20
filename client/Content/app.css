@@ -3,3 +3,21 @@ body {
   padding-bottom: 70px;
   }
 
+/* Custom styles for the logo */
+.logo-img {
+  max-height: 40px; /* Set the maximum height for the logo */
+  /* Adjust width if needed */
+  /* max-width: 100%; */
+  /* Add margin if needed */
+  /* margin-right: 10px; */
+}
+
+/* Flexbox styles for alignment */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo-img {
+  margin-right: 5px; /* Optional margin between logo and text */
+}

@@ -1,10 +1,3 @@
-/*
-  File: books.js
-  Author: MD Rakib
-  Student ID: 301306055
-  Web App Name: Favourite Book List
-*/
-
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -39,9 +32,12 @@ router.get('/details', (req, res, next) => {
 router.post('/details', (req, res, next) => {
   const newBook = new Book({
     Title: req.body.title,
-    Price: req.body.price,
     Author: req.body.author,
     Genre: req.body.genre,
+    Available: req.body.available,
+    Return_date: req.body.returnDate,
+    Overdue_fees: req.body.overdueFees,
+    Currently_with: req.body.currentlyWith,
 });
 
 newBook.save((err) => {
@@ -53,6 +49,7 @@ newBook.save((err) => {
   }
 });
 });
+
 // GET the Book Details page in order to edit an existing Book
 router.get('/details/:id', (req, res, next) => {
   const id = req.params.id;
@@ -74,9 +71,12 @@ router.post('/details/:id', (req, res, next) => {
 
     const updatedBooks = {
       Title: req.body.title,
-      Price: req.body.price,
       Author: req.body.author,
       Genre: req.body.genre,
+      Available: req.body.available,
+      Return_date: req.body.returnDate,
+      Overdue_fees: req.body.overdueFees,
+      Currently_with: req.body.currentlyWith,
     };
 
     Book.findByIdAndUpdate(id, updatedBooks, (err, contact) => {

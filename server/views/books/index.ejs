@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
-          <h3>Favourite Books List </h3>
+          <h3>Library Books List </h3>
           <!-- FIXED ADD BUTTON BELOW -->
           <a href="/books/details" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
@@ -13,9 +13,12 @@
               <thead>
                 <tr>
                   <th>Title</th>
-                  <th class="text-center">Price</th>
                   <th class="text-center">Author</th>
                   <th class="text-center">Genre</th>
+                  <th class="text-center">Available</th>
+                  <th class="text-center">Return Date</th>
+                  <th class="text-center">Overdue Fees</th>
+                  <th class="text-center">Currently With</th>
                   <th class="text-center"></th>
                   <th class="text-center"></th>
                 </tr>
@@ -25,9 +28,12 @@
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
                   <td><%= books[count].Title %></td>
-                  <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
+                  <td class="text-center"><%= books[count].Available %></td>
+                  <td class="text-center"><%= books[count].Return_date %></td>
+                  <td class="text-center">$<%= books[count].Overdue_fees %></td>
+                  <td class="text-center"><%= books[count].Currently_with %></td>
 
                   <td class="text-center">
                     <!-- EDIT BUTTON -->

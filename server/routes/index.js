@@ -1,10 +1,3 @@
-/*
-  File: index.js
-  Author: MD Rakib
-  Student ID: 301306055
-  Web App Name: Favourite Book List
-*/
-
 // modules required for routing
 let express = require('express');
 let router = express.Router();

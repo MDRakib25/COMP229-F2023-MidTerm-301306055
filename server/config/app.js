@@ -1,10 +1,3 @@
-/*
-  File: app.js
-  Author: MD Rakib
-  Student ID: 301306055
-  Web App Name: Favourite Book List
-*/
-
 // moddules for node and express
 let createError = require('http-errors');
 let express = require('express');
